@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { ModalContent, Overlay } from './Modal.styled';
 import React, { Component } from 'react';
 
@@ -23,4 +24,7 @@ class Modal extends Component {
     );
   }
 }
+
+Modal.propTypes = { handleOverlayClick: PropTypes.func.isRequired };
+
 export default Modal;

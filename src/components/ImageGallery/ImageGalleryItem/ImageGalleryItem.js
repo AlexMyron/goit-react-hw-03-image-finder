@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import { GalleryItemStyles, GalleryItemImg } from './ImageGalleryItem.styled';
 
 const ImageGalleryItem = ({ queryResult }) => {
@@ -12,6 +13,10 @@ const ImageGalleryItem = ({ queryResult }) => {
       })}
     </>
   );
+};
+
+ImageGalleryItem.propTypes = {
+  queryResult: PropTypes.array.isRequired,
 };
 
 export default ImageGalleryItem;

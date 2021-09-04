@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import LoadBtnStyles from './LoadMoreBtn.styled';
 
 const LoadMoreBtn = ({ handleClick }) => {
@@ -7,4 +8,7 @@ const LoadMoreBtn = ({ handleClick }) => {
     </LoadBtnStyles>
   );
 };
+
+LoadMoreBtn.propTypes = { handleClick: PropTypes.func.isRequired };
+
 export default LoadMoreBtn;
