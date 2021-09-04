@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Loader from 'react-loader-spinner';
-// import { GrFormClose } from 'react-icons/gr';
 import './App.css';
 import Searchbar from './components/Searchbar';
 import ImageGallery from './components/ImageGallery';
