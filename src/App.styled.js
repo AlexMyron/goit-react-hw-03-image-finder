@@ -8,7 +8,7 @@ const AppWrapper = styled.div`
 `;
 
 const ModalBtn = styled.button(`
-display: block;
+  display: block;
   margin-left: auto;
   margin-right: 0;
   margin-bottom: 5px;
@@ -18,7 +18,6 @@ display: block;
   background-color: #3f51b5;
   transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
-  display: inline-block;
   color: #fff;
   border: 0;
   text-decoration: none;

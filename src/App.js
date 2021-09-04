@@ -50,7 +50,7 @@ class App extends Component {
   handleSearchinput = searchInput => {
     this.setState({ searchInput });
 
-    const { currentPage } = this.state.currentPage;
+    const { currentPage } = this.state;
 
     this.setState({ currentPage: 1, apiResult: [] });
     this.fetchRequest(searchInput, currentPage);
