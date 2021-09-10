@@ -1,8 +1,43 @@
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { Component } from 'react';
 import { Form, Bar, SearchBtn, SerchBtnLabel, SearchInput } from './Searchbar.styled';
 
-class Searchbar extends Component {
+const Searchbar = ({ sendInputValue }) => {
+  const [inputValue, setInputValue] = useState('');
+
+  const handleSearchInput = e => {
+    // this.setState({ inputValue: e.currentTarget.value });
+    setInputValue(e.currentTarget.value);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    sendInputValue(inputValue);
+  };
+
+  return (
+    <Form>
+      <Bar onSubmit={handleSubmit}>
+        <SearchBtn type="submit">
+          <SerchBtnLabel />
+        </SearchBtn>
+
+        <SearchInput
+          type="text"
+          value={inputValue}
+          onChange={handleSearchInput}
+          autoComplete="off"
+          autoFocus
+          placeholder="Search images and photos"
+        />
+      </Bar>
+    </Form>
+  );
+};
+
+// ----------------
+class classedSearchbar extends Component {
   state = {
     inputValue: '',
   };
